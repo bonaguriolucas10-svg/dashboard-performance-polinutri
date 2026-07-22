@@ -1,115 +1,12 @@
-/* ==========================================================
-   POLINUTRI PERFORMANCE DASHBOARD
-   Wave 002
-   data.js
-========================================================== */
-
-const dashboardData = {
-
-    indicadores:{
-
-        gpd:845,
-
-        ca:2.41,
-
-        mortalidade:2.15,
-
-        pesoFinal:123.6
-
-    },
-
-    evolucaoGPD:[
-
-        {mes:"Jan",valor:790},
-        {mes:"Fev",valor:801},
-        {mes:"Mar",valor:815},
-        {mes:"Abr",valor:828},
-        {mes:"Mai",valor:839},
-        {mes:"Jun",valor:845}
-
-    ],
-
-    evolucaoCA:[
-
-        {mes:"Jan",valor:2.58},
-        {mes:"Fev",valor:2.54},
-        {mes:"Mar",valor:2.50},
-        {mes:"Abr",valor:2.47},
-        {mes:"Mai",valor:2.44},
-        {mes:"Jun",valor:2.41}
-
-    ],
-
-    granjas:[
-
-        {
-            nome:"Granja Alpha",
-            gpd:852,
-            ca:2.38,
-            mortalidade:1.80,
-            peso:124.8
-        },
-
-        {
-            nome:"Granja Beta",
-            gpd:841,
-            ca:2.43,
-            mortalidade:2.05,
-            peso:122.9
-        },
-
-        {
-            nome:"Granja Gama",
-            gpd:833,
-            ca:2.48,
-            mortalidade:2.61,
-            peso:121.5
-        },
-
-        {
-            nome:"Granja Delta",
-            gpd:858,
-            ca:2.37,
-            mortalidade:1.72,
-            peso:125.4
-        },
-
-        {
-            nome:"Granja Épsilon",
-            gpd:839,
-            ca:2.46,
-            mortalidade:2.11,
-            peso:122.3
-        }
-
-    ],
-
-    benchmark:[
-
-        {
-            indicador:"GPD",
-            polinutri:845,
-            mercado:812
-        },
-
-        {
-            indicador:"CA",
-            polinutri:2.41,
-            mercado:2.56
-        },
-
-        {
-            indicador:"Mortalidade",
-            polinutri:2.15,
-            mercado:2.73
-        },
-
-        {
-            indicador:"Peso Final",
-            polinutri:123.6,
-            mercado:119.4
-        }
-
-    ]
-
-};
+window.PERFORMANCE_DATA={clients:[
+{id:'werlang',name:'Clóvis Werlang',phases:['Crescimento + Terminação'],lots:[{id:'WER-2026-JAN-MAI',label:'Jan–Mai/2026',date:'2026-05-31',company:'Polinutri',phase:'Crescimento + Terminação',entry:20629,exit:20165,weightIn:22.66,weightOut:124.58,days:100.45,gpd:1.015,ca:2.275,ca100:2.029,crd:2.260,mortality:2.160,feed:null,feedPerHead:null,iep:null,profitPerHead:null,notes:'Consolidado oficial Polinutri; Sifra desconsiderada.'}]},
+{id:'esterio',name:'Estério Bramente Quioca',phases:['Creche'],lots:[{id:'EBQ-POLI-01',label:'Lote Polinutri 01',date:'2026-06-01',company:'Polinutri',phase:'Creche',entry:3260,exit:3196,weightIn:7.75,weightOut:26.79,days:46,gpd:.414,ca:1.58,ca100:null,crd:null,mortality:1.963,feed:112960,feedPerHead:35.34,iep:null,profitPerHead:84.08,notes:'Período 16/04/2026 a 01/06/2026; entradas e saídas parceladas.'}]},
+{id:'ceccagno',name:'Carlos Ceccagno',phases:['Crescimento + Terminação'],lots:[
+{id:'CEC-2026-01',label:'Janeiro/2026',date:'2026-01-31',company:'Polinutri',phase:'Crescimento + Terminação',entry:4659,exit:4591,weightIn:25.22,weightOut:128.39,days:99.11,gpd:1.0372,ca:2.3093,ca100:2.0254,crd:null,mortality:1.46,feed:898250,feedPerHead:195.66,iep:null,profitPerHead:null,notes:'Série mensal oficial.'},
+{id:'CEC-2026-02',label:'Fevereiro/2026',date:'2026-02-28',company:'Polinutri',phase:'Crescimento + Terminação',entry:4387,exit:4298,weightIn:24.68,weightOut:126.53,days:103.90,gpd:.9753,ca:2.3176,ca100:2.0523,crd:null,mortality:2.03,feed:943800,feedPerHead:219.59,iep:null,profitPerHead:null,notes:'Série mensal oficial.'},
+{id:'CEC-2026-03',label:'Março/2026',date:'2026-03-31',company:'Polinutri',phase:'Crescimento + Terminação',entry:4348,exit:4285,weightIn:26.20,weightOut:135.62,days:105.70,gpd:1.0315,ca:2.3331,ca100:1.9769,crd:null,mortality:1.45,feed:90060,feedPerHead:21.02,iep:null,profitPerHead:null,notes:'Série mensal oficial; consumo conforme planilha fonte.'},
+{id:'CEC-2026-04',label:'Abril/2026',date:'2026-04-30',company:'Polinutri',phase:'Crescimento + Terminação',entry:6507,exit:6349,weightIn:24.89,weightOut:134.82,days:106.28,gpd:1.0285,ca:2.3066,ca100:1.9584,crd:null,mortality:2.43,feed:600780,feedPerHead:94.63,iep:null,profitPerHead:null,notes:'Série mensal oficial.'}]},
+{id:'coacig',name:'COACIG',phases:['Creche'],lots:[
+{id:'COA-2026-01A',label:'01/01 – Polinutri A',date:'2026-01-01',company:'Polinutri',phase:'Creche',gpd:.386,profitPerHead:55.96,entry:null,exit:null,weightIn:null,weightOut:null,days:null,ca:null,ca100:null,crd:null,mortality:null,feed:null,feedPerHead:null,iep:null,notes:'Lote oficial COACIG.'},
+{id:'COA-2026-01B',label:'20/01 – Polinutri B',date:'2026-01-20',company:'Polinutri',phase:'Creche',gpd:.468,profitPerHead:40.41,entry:null,exit:null,weightIn:null,weightOut:null,days:null,ca:null,ca100:null,crd:null,mortality:null,feed:null,feedPerHead:null,iep:null,notes:'Lote oficial COACIG.'},
+{id:'COA-2026-02',label:'26/02 – Polinutri',date:'2026-02-26',company:'Polinutri',phase:'Creche',gpd:.358,profitPerHead:24.85,entry:null,exit:null,weightIn:null,weightOut:null,days:null,ca:null,ca100:null,crd:null,mortality:null,feed:null,feedPerHead:null,iep:null,notes:'Lote oficial COACIG.'}]}]};

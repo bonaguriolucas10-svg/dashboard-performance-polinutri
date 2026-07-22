@@ -1,0 +1,458 @@
+/* ==========================================================
+   POLINUTRI PERFORMANCE DASHBOARD
+   Wave 002
+   style.css
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================================================
+LAYOUT
+========================================================== */
+
+.layout{
+
+    display:grid;
+
+    grid-template-columns:
+        var(--sidebar-width)
+        1fr;
+
+    min-height:100vh;
+
+}
+
+/* ==========================================================
+SIDEBAR
+========================================================== */
+
+.sidebar{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:32px 24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:40px;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.logo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.logo h2{
+
+    font-size:30px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+}
+
+.logo span{
+
+    font-size:13px;
+
+    opacity:.85;
+
+}
+
+.sidebar nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.menu{
+
+    width:100%;
+
+    border:none;
+
+    background:transparent;
+
+    color:#fff;
+
+    padding:16px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    text-align:left;
+
+    transition:var(--transition);
+
+}
+
+.menu:hover{
+
+    background:rgba(255,255,255,.12);
+
+}
+
+.menu.active{
+
+    background:#fff;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+MAIN
+========================================================== */
+
+main{
+
+    padding:34px;
+
+}
+
+/* ==========================================================
+HEADER
+========================================================== */
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:32px;
+
+}
+
+.topbar h1{
+
+    font-size:34px;
+
+    font-weight:800;
+
+}
+
+.topbar p{
+
+    color:var(--text-light);
+
+    margin-top:6px;
+
+}
+
+.filters{
+
+    display:flex;
+
+    gap:14px;
+
+}
+
+.filters select{
+
+    border:1px solid var(--border);
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:12px 18px;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================================
+CARDS
+========================================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:24px;
+
+    margin-bottom:34px;
+
+}
+
+.card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.25s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.card h3{
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+    font-weight:500;
+
+    margin-bottom:12px;
+
+}
+
+.card strong{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:var(--primary);
+
+}
+
+/* ==========================================================
+CHARTS
+========================================================== */
+
+.charts{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:24px;
+
+    margin-bottom:32px;
+
+}
+
+.chart{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:24px;
+
+    box-shadow:var(--shadow-sm);
+
+    min-height:360px;
+
+}
+
+/* ==========================================================
+TABLE
+========================================================== */
+
+.table{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+th{
+
+    padding:18px;
+
+    text-align:left;
+
+    font-size:14px;
+
+}
+
+td{
+
+    padding:18px;
+
+    border-bottom:1px solid var(--border);
+
+    font-size:14px;
+
+}
+
+tbody tr{
+
+    transition:.2s;
+
+}
+
+tbody tr:hover{
+
+    background:#f5f8fd;
+
+}
+
+/* ==========================================================
+RESPONSIVO
+========================================================== */
+
+@media(max-width:1200px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.charts{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:900px){
+
+.layout{
+
+grid-template-columns:1fr;
+
+}
+
+.sidebar{
+
+display:none;
+
+}
+
+main{
+
+padding:20px;
+
+}
+
+.topbar{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:20px;
+
+}
+
+.filters{
+
+width:100%;
+
+}
+
+.filters select{
+
+flex:1;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.chart{
+
+min-height:280px;
+
+}
+
+.card strong{
+
+font-size:28px;
+
+}
+
+.topbar h1{
+
+font-size:26px;
+
+}
+
+}
